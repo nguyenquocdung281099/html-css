@@ -1,0 +1,262 @@
+/* all style */
+*{
+  margin: 0;
+  padding: 0;
+}
+html {
+  background-image: -moz-linear-gradient(to bottom, white 0%, #facd8a 100%);
+  background-image: -webkit-linear-gradient(to bottom, white 0%, #facd8a 100%);
+  background-image: -o-linear-gradient(to bottom, white 0%, #facd8a 100%);
+  background-image: linear-gradient(to bottom, white 0%, #facd8a 100%);
+  
+}
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-size: 100%;
+  max-width: 1000px;
+  width: 95%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  /* padding: 0.5em 0.5em; */
+  border: 1px solid black;
+  
+}
+form{
+  box-sizing: border-box;
+  
+}
+h1,h2,h3,p ,img,a{
+  margin-bottom: 0.2em;
+
+}
+h1{
+  font-size: 150%;
+}
+a{
+  
+  /* font-style: oblique; */
+  font-weight: bold;
+  color: rgba(129, 14, 14, 0.753);
+}
+a:hover{
+  color: blue;
+}
+ul{
+  list-style-type: none;
+}
+/* style header  */
+
+header{
+  margin: 0;
+  padding: 0.5em 1em;
+  color: rgba(129, 14, 14, 0.753);
+  grid-area: head ;
+  margin-bottom: 0.5em;
+}
+header h2,header h3
+{
+   padding-left: 15%;
+   text-align: left;
+}
+header img{
+  float: left;
+}
+.shadow{
+  text-shadow: 1px 1px rgba(19, 19, 19, 0.753);
+}
+/* style nav */
+nav{
+  
+  clear: both;
+  grid-area: nav;
+  width:100% ;
+  margin: 0;
+  padding: 0;
+  
+}
+ul{
+  width: 100%;
+  display: grid;
+  grid-template: 50px/repeat(5,1fr);
+  grid-template-areas: "home speaker luncheon ticket aboutus";
+  grid-area: nav;
+  background-color:#facd8a;
+  align-items: center;
+  
+  
+}
+ul li{
+  text-align: center;
+}
+nav ul li a{
+  
+  text-decoration: none;
+}
+/* style container */
+.container{
+  padding: 0.5em 1em;
+  display: flex  ;
+}
+/* style aside  */
+aside{
+  flex-basis: 50%;
+}
+aside img{
+  margin: 0.5em;
+}
+/* style main */
+main{
+  flex-basis:60%;
+}
+label{
+  float: left;
+  width: 8em;
+ text-align: right;
+ padding-right: 1em;
+}
+fieldset:first-child{
+  padding-top:0.5em ;
+
+}
+
+input,select{
+  margin: 0.1em;
+  border: 2px solid #800000;
+  width: 15em;
+}
+legend{
+  color: black;
+  font-weight: bold;
+}
+.payment label{
+  float: none;
+  
+}
+.payment{
+  padding-left: 5em;
+  
+}
+.payment input{
+  width: 4em;
+  
+}
+fieldset {
+  padding: 0 1em 0.5em 1em;
+  margin-bottom: 0.5em;
+  
+}
+.button{
+ padding: 1em;
+  margin-left: 3em;
+}
+#reset, #submit{
+  
+  width: 7em;
+  border-radius:3px;
+  padding: 0.1em 0.5em 0.1em 0.5em;
+  background-color: #800000;
+  color: white;
+}
+.month{
+  width: 7em;
+
+}
+.year{
+  width: 5em;
+}
+
+
+/* finish main */
+/* style footer */
+footer{
+  background-color:rgba(129, 14, 14, 0.753) ;
+  grid-area: foot;
+  text-align: end;
+  padding: 1em ;
+  margin-top:1em ;
+}
+#mobile_menu{
+  display: none;
+}
+/* style for screen 767px */
+@media only screen and (max-width : 767px)
+{
+  body{
+    width: 100%;
+    font-size: 90%;
+  }
+  header{
+    padding: 0;
+    margin-top: 0.5em;
+    display: grid;
+    grid-template: repeat(3,auto)/1fr;
+    justify-items: center;
+  }
+  #mobile_menu{
+    display: block;
+  }
+  #nav_menu{
+    display: none;
+  }
+  .container{
+    flex-direction: column;
+    /* padding-right: 0; */
+
+  }
+  
+  aside{
+    order: 2;
+    
+  }
+  .figure{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  footer{
+    text-align: ce;
+  }
+}
+@media only screen and (max-width: 479px)
+{
+  body{
+    font-size: 60%;
+
+  }
+  input,select{
+    margin: 0.1em;
+    border: 2px solid #800000;
+    width: 90%;
+  }
+
+  table{
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .figure{
+    flex-direction: column;
+  }
+  label{
+    float: left;
+   
+   text-align: left;
+   
+  }
+  .button{
+    margin-left: 0em;
+    
+  }
+  #reset, #submit{
+  
+    width: 5.5em;
+    border-radius:3px;
+    padding: 0;
+    
+  }
+  .payment{
+    padding-left: 0;
+  }
+  
+}
